@@ -6,14 +6,14 @@ export class HomePage extends BasePage {
 //Private locators
 private readonly logoutlink: Locator;
 private readonly headers: Locator;
-
+private readonly USERNAME: Locator;
 
 
 constructor(page:Page) {
     super(page);
     this.logoutlink = page.getByRole('link', { name: 'Logout' }).first();
     this.headers=page.getByRole('heading', {level: 2});
-
+    this.USERNAME=page.getByRole('textbox', { name: 'Username' });
   }
 
 
